@@ -2,6 +2,7 @@ import basicSsl from "@vitejs/plugin-basic-ssl";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { execSync } from "node:child_process";
+import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { getLanAddresses, printNetworkAccessHelp } from "./scripts/network-access-help.js";
@@ -60,10 +61,17 @@ function devAccessInject() {
     apply: "serve",
     transformIndexHtml(html) {
       const ips = getLanAddresses();
+      let externalUrl = "";
+      try {
+        externalUrl = fs.readFileSync(path.join(__dirname, ".dev-tunnel-url"), "utf8").trim();
+      } catch {
+        // no tunnel running
+      }
       const payload = JSON.stringify({
         ips,
         httpPort: 5173,
         httpsPort: 5174,
+        externalUrl: externalUrl || null,
       });
       return html.replace(
         "</head>",
@@ -108,6 +116,13 @@ export default defineConfig({
     host: "0.0.0.0",
     port: devPort,
     strictPort: Boolean(process.env.VITE_DEV_STRICT_PORT),
+    allowedHosts: true,
+    hmr: process.env.VITE_DEV_TUNNEL
+      ? {
+          protocol: "wss",
+          clientPort: 443,
+        }
+      : undefined,
     headers: {
       "X-Content-Type-Options": "nosniff",
     },

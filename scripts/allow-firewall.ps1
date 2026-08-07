@@ -10,8 +10,12 @@ foreach ($port in $ports) {
     Write-Host "Regra já existe: $name"
     continue
   }
-  New-NetFirewallRule -DisplayName $name -Direction Inbound -Action Allow -Protocol TCP -LocalPort $port | Out-Null
-  Write-Host "Firewall liberado: porta $port"
+  try {
+    New-NetFirewallRule -DisplayName $name -Direction Inbound -Action Allow -Protocol TCP -LocalPort $port -ErrorAction Stop | Out-Null
+    Write-Host "Firewall liberado: porta $port"
+  } catch {
+    Write-Host "Não foi possível liberar a porta $port (execute o PowerShell como Administrador)."
+  }
 }
 
 Write-Host "`nPronto. Reinicie npm run dev:network e acesse pelo IP exibido no terminal."

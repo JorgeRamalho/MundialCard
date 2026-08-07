@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "dev:network": "vite --host 0.0.0.0",
+    "dev:external": "node scripts/dev-external.mjs",
     "dev:https": "node scripts/dev-https.mjs",
     "dev:test": "node scripts/dev-test.mjs",
     "build": "vite build",

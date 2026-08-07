@@ -32,14 +32,17 @@ Abra o endereço local indicado no terminal (geralmente `http://localhost:5173`)
 ## Estrutura principal
 
 ```
-index.html              # Entrada HTML
+index.html              # Entrada HTML (Vite)
 public/style.css        # Design system e layout responsivo
-public/script.js        # Utilitários JavaScript
 public/media/           # Vídeos oficiais
 src/App.jsx             # Rotas React
 src/pages/              # Home, dashboard, cliente, parceiro, etc.
 src/components/         # Navbar, Footer, formulário de lançamento
-docs/venda-digital-escalavel.md
+docs/
+  apresentacao/         # PDF e slides para o cliente
+  historico/            # Registros e histórico do projeto
+  SUPABASE-SETUP.md
+  venda-digital-escalavel.md
 ```
 
 ## Rotas

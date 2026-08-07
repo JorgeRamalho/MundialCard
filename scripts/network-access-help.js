@@ -53,7 +53,7 @@ export function printNetworkAccessHelp(server) {
     }
   }
 
-  console.log("\n  Produção (sempre acessível): https://mundialcard.netlify.app/\n");
+  console.log("\n  Acesso externo (internet): npm run dev:external\n");
 }
 
 export function printDualServerBanner() {

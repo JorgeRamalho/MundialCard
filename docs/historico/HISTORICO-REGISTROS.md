@@ -69,7 +69,6 @@ Plataforma **MundialCard** (cartão de super benefícios / multibenefícios em s
 ```
 index.html
 public/style.css
-public/script.js
 public/media/           # vídeos
 public/images/          # carrossel e parceiros
 src/App.jsx
@@ -77,6 +76,10 @@ src/components/
 src/pages/
 src/data/content.js
 docs/
+  apresentacao/         # PDF e slides para o cliente
+  historico/            # este arquivo e histórico de conversas
+  venda-digital-escalavel.md
+  SUPABASE-SETUP.md
 ```
 
 ## Branches

@@ -1,7 +1,5 @@
 import { useMemo, useState } from "react";
 
-const PRODUCTION_URL = "https://mundialcard.netlify.app/";
-
 function buildLinks() {
   const dev = window.__MUNDIALCARD_DEV_ACCESS__;
   const origin = window.location.origin;
@@ -26,7 +24,9 @@ function buildLinks() {
     });
   }
 
-  links.push({ label: "Produção Netlify", url: PRODUCTION_URL });
+  if (dev?.externalUrl) {
+    links.unshift({ label: "Internet (base de testes)", url: dev.externalUrl });
+  }
 
   return [...new Map(links.map((item) => [item.url, item])).values()];
 }
@@ -52,10 +52,7 @@ export default function DevAccessBar() {
         <div className="dev-access-bar__panel">
           <p>
             Use <strong>HTTP</strong> para testar o site no celular. Use <strong>HTTPS (porta 5174)</strong>{" "}
-            para a câmera do Dr. Digital. Produção:{" "}
-            <a href={PRODUCTION_URL} target="_blank" rel="noopener noreferrer">
-              mundialcard.netlify.app
-            </a>
+            para a câmera do Dr. Digital. Para link na internet: <code>npm run dev:external</code>.
           </p>
           <ul className="dev-access-bar__links">
             {links.map((item) => (
