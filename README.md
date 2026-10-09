@@ -1,67 +1,15 @@
-﻿# MundialCard — Seu cartão de super benefícios
+📌##MundialCard - O cartão do mundo Ltda
 
-Plataforma digital de benefícios (saúde, funeral, alimentação, refeição, lazer, academia, telemedicina) com experiência de app, venda escalável, atendimento em camadas e canal B2B.
+🌐 ## Site Link do projeto online: https://mundialcard.vercel.app/
 
-## Identidade
+📂 ## Repositório: https://github.com//JorgeRamalho/MundialCard
 
-| Item | Valor |
-|------|--------|
-| **Nome** | MundialCard |
-| **Slogan** | Seu cartão de super benefícios |
-| **Tagline** | Mais vida. Mais cuidado. Benefícios sem limites. |
-| **Logo** | `public/logo.svg` e `public/logo-white.svg` |
-| **Paleta** | Navy (#0A1628), teal (#14B8A6), sky (#0EA5E9), gold (#D4A017), cream (#F7F4EE) |
-| **Fontes** | Plus Jakarta Sans (títulos) + DM Sans (texto) |
+💻 ## Tecnologias
 
-## Vídeos integrados
+HTML CSS JavaScript React TypeScript Node.js 📲 ## Funcionalidades
 
-| Arquivo | Uso |
-|---------|-----|
-| `public/media/MundialCard-app.mp4` | Hero, app no celular, FAQ, área do cliente |
-| `public/media/MundialCard-institucional.mp4` | FAQ, atendimento, educação pré-venda |
+Fotos e Imagens Vídeos Layout Estilo do Site
 
-## Como rodar
+📠 ## Como executar git clone ... npm install npm run dev
 
-```bash
-npm install
-npm run dev
-```
-
-Abra o endereço local indicado no terminal (geralmente `http://localhost:5173`).
-
-## Estrutura principal
-
-```
-index.html              # Entrada HTML (Vite)
-public/style.css        # Design system e layout responsivo
-public/media/           # Vídeos oficiais
-src/App.jsx             # Rotas React
-src/pages/              # Home, dashboard, cliente, parceiro, etc.
-src/components/         # Navbar, Footer, formulário de lançamento
-docs/
-  apresentacao/         # PDF e slides para o cliente
-  historico/            # Registros e histórico do projeto
-  SUPABASE-SETUP.md
-  venda-digital-escalavel.md
-```
-
-## Rotas
-
-- `/` — Home (hero, benefícios, planos, telemedicina, FAQ, B2B, formulário)
-- `/cadastro` — Cupom de inauguração
-- `/dashboard` — Dashboard operacional
-- `/area-cliente` — Área do cliente + kit digital
-- `/parceiros` — Representantes B2B
-- `/atendimento` — Base → IA → humano
-- `/agendamento` — Telemedicina
-- `/produtos` — Planos e categorias
-- `/app` — Download do app
-
-## Formulário de lançamento
-
-Campos: nome, data de nascimento, cidade, telefone, e-mail e endereço.  
-Os leads ficam em `localStorage` (`mundialcard_leads`) e geram cupom `MUND-XXXX`.
-
-## Documentação de venda digital
-
-Veja `docs/venda-digital-escalavel.md`.
+💿 ## Autor 📄Seu nome: Jorge R. Barbosa 💼 LinkedIn: https://www.linkedin.com/in/jorge-r-barbosa-aabb0417b/ 👾 GitHub: https://github.com/JorgeRamalho ☎️ Contato: 41 99143-4153
